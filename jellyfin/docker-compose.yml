@@ -1,0 +1,18 @@
+# https://hub.docker.com/r/linuxserver/jellyfin
+
+---
+version: "3"
+services:
+  jellyfin:
+    image: lscr.io/linuxserver/jellyfin:latest
+    container_name: jellyfin
+    environment:
+      - PUID=501
+      - PGID=20
+      - TZ=America/Sao_Paulo
+    volumes:
+      - ./config:/config
+      - ./media:/data
+    ports:
+      - 8096:8096
+    restart: unless-stopped
