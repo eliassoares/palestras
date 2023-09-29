@@ -1,0 +1,13 @@
+# Containers data:
+/jellyfin/config
+/jellyfin/media
+/postgres/postgres-data
+
+# MAC trash
+.DS_Store
+*/.DS_Store
+
+# IDEs
+.idea
+.vscode
+
