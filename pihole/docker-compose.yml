@@ -1,0 +1,22 @@
+# https://hub.docker.com/r/pihole/pihole
+
+version: "3"
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:2023.03.1
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "67:67/udp" # Only required if you are using Pi-hole as your DHCP server
+      - "8088:80/tcp"
+    environment:
+      - TZ='America/Sao_Paulo'
+      - PUID=501
+      - PGID=20
+      - DNSMASQ_USER=root
+      - WEBPASSWORD=arya-stark # It is recommended to use a .env file to store your passwords
+
+    cap_add:
+      - NET_ADMIN # Recommended but not required (DHCP needs NET_ADMIN)
+    restart: always
