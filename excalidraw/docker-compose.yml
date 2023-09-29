@@ -1,0 +1,11 @@
+# https://www.virtualizationhowto.com/2023/04/excalidraw-whiteboard-ultimate-docker-self-hosted-home-lab-diagramming/
+
+version: '3'
+
+services:
+  excalidraw:
+    image: excalidraw/excalidraw:latest
+    restart: always
+    ports:
+      - 8064:80
+    container_name: excalidraw
