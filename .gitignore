@@ -1,7 +1,7 @@
 # Containers data:
-/jellyfin/config
-/jellyfin/media
-/postgres/postgres-data
+/executando-app-web-com-docker/jellyfin/config
+/executando-app-web-com-docker/jellyfin/media
+/executando-app-web-com-docker/postgres/postgres-data
 
 # MAC trash
 .DS_Store
